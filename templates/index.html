@@ -40,18 +40,61 @@
         </div>
     </div>
 
-    <div class="about-section">
+    <div id="about-section" class="about-section" style="display:none;">
+        <span class="close-button">&times;</span>
         <h2>About the Project</h2>
-        <p>This project provides an easy-to-use interface for converting video files into audio formats. By leveraging Artificial Intelligence and Machine Learning techniques, the system identifies the essential audio streams in videos and efficiently converts them for users. Whether it's extracting soundtracks or isolating dialogues, this tool aims to simplify video-to-audio conversions while maintaining the quality of the output.</p>
-        <p>The application can handle a wide range of video formats and automatically optimizes the output audio for different purposes like podcasts, voiceovers, and music extraction.</p>
+        <p>
+            This program is a web application developed using Flask that allows users to convert video files into audio files and has the potential for generating lyrics based on the audio content. The main functionalities include:
+        </p>
+        <ul>
+            <li><strong>Video Upload:</strong> Users can upload a video file.</li>
+            <li><strong>Audio Conversion:</strong> The program processes the uploaded video and converts it into an audio file format (MP3).</li>
+            <li><strong>Download Link:</strong> Once the conversion is complete, a link is provided to download the generated audio file.</li>
+            <li><strong>Lyrics Generation:</strong> A placeholder functionality for generating lyrics from the audio file is included.</li>
+        </ul>
+        
+        <h3>Use Cases</h3>
+        <p>This application can be beneficial for various scenarios:</p>
+        <ul>
+            <li><strong>Content Creators:</strong> YouTube creators, vloggers, and other content creators can use the application to easily extract audio from their video content.</li>
+            <li><strong>Musicians:</strong> Musicians can convert their music videos into audio files for distribution on music platforms.</li>
+            <li><strong>Podcasters:</strong> Podcasters can extract audio from video recordings of their sessions to create audio-only versions for their listeners.</li>
+            <li><strong>Students and Educators:</strong> This tool can be useful for educators who wish to extract audio from educational videos for personal study or distribution.</li>
+            <li><strong>Lyrics Generation:</strong> If implemented, the lyrics generation feature can help artists and lyricists quickly generate lyrics based on their audio tracks.</li>
+        </ul>
+
+        <h3>Components Used in the Program</h3>
+        <p>
+            The program utilizes the following components:
+        </p>
+        <ul>
+            <li><strong>Flask:</strong> A lightweight WSGI web application framework in Python.</li>
+            <li><strong>Pydub:</strong> A Python library that simplifies audio file manipulation and conversion.</li>
+            <li><strong>FFmpeg:</strong> A powerful multimedia framework used for audio and video processing tasks.</li>
+            <li><strong>HTML/CSS/JavaScript:</strong> Standard web technologies are used to create the user interface and handle user input.</li>
+        </ul>
+
+        <h3>Usage of pip</h3>
+        <p>
+            <strong>pip</strong> is a package management system for Python that allows developers to install and manage software packages. In this program, pip is used to install the required libraries:
+        </p>
+        <ul>
+            <li><strong>Flask:</strong> Command: <code>pip install Flask</code></li>
+            <li><strong>Pydub:</strong> Command: <code>pip install pydub</code></li>
+            <li><strong>ffmpeg-python:</strong> Command: <code>pip install ffmpeg-python</code></li>
+        </ul>
+
+        <p>
+            By using pip, developers can quickly set up their development environment and ensure that all necessary packages are available.
+        </p>
     </div>
+
     <!-- Footer section -->
     <footer>
         <nav class="footer-nav">
             <p>Copyrights &copy; 2024, All rights reserved CloverTechnologies</p>
         </nav>
     </footer>
-
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 </html>

@@ -33,8 +33,8 @@ body {
     font-size: 1.5rem; /* Adjust font size as needed */
     color: #8e051f; /* Match the theme color */
     font-weight: bold;
-
 }
+
 .nav-links {
     display: flex;
     gap: 20px;
@@ -42,11 +42,12 @@ body {
 
 .nav-links a {
     color: #8e051f;
-    text-decoration:none;
+    text-decoration: none;
     cursor: pointer;
     font-weight: bold;
 }
-.nav-links a:hover{
+
+.nav-links a:hover {
     text-decoration: underline;
 }
 
@@ -59,6 +60,7 @@ body {
     color: black;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    flex-grow: 1; /* Allow the container to grow and take up space */
 }
 
 /* Headings Styles */
@@ -94,30 +96,54 @@ hr {
     margin: 30px 0;
 }
 
-/* About Section */
+/* About Section Styles */
 .about-section {
-    background-color: #7a041d; /* Darker shade that complements the body background */
-    color: white; /* Text color */
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    margin-top: auto; /* Push the About section to the bottom */
-    text-align: center; /* Align text to the left */
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    max-width: 800px;
+    max-height: 80%;
+    overflow-y: auto;
+    background-color: white;
+    border: 2px solid #333;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+    color:#8e051f;
+}
+.about-section h2, 
+.about-section h3 {
+    text-align: center; /* Center align headings */
+}
+.about-section p,
+.about-section ul {
+    text-align: left; /* Left align text */
 }
 
-.about-section h2 {
-    margin-top: 0; /* Remove margin from the top */
+/* Close Button for About Section */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    color: #333;
 }
 
-.about-section p {
-    margin: 0; /* Reset default margin */
-    line-height: 1.5; /* Improve readability */
-    text-align: justify;
-} 
+.close-button:hover {
+    color: #555;
+}
 
+/* Footer Styles */
 footer {
     text-align: center;
-    margin-top: 40px;
     padding: 10px;
     background-color: #333;
     color: white;
+    width: 100%; /* Ensure full-width footer */
+    margin-top: auto; /* Push the footer to the bottom */
 }

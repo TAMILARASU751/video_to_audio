@@ -43,12 +43,16 @@ document.getElementById('conversion-form').addEventListener('submit', function(e
         alert('An error occurred during conversion.');
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const aboutLink = document.getElementById('about-link');
+    const aboutSection = document.getElementById('about-section');
+    const closeButton = document.querySelector('.close-button');
 
-document.getElementById('about-link').addEventListener('click', function() {
-    var aboutSection = document.getElementById('about-section');
-    if (aboutSection.style.display === 'none' || aboutSection.style.display === '') {
-        aboutSection.style.display = 'block'; // Show the About section
-    } else {
-        aboutSection.style.display = 'none'; // Hide the About section
-    }
+    aboutLink.addEventListener('click', () => {
+        aboutSection.style.display = 'block'; // Show the about section
+    });
+
+    closeButton.addEventListener('click', () => {
+        aboutSection.style.display = 'none'; // Hide the about section
+    });
 });
