@@ -43,3 +43,12 @@ document.getElementById('conversion-form').addEventListener('submit', function(e
         alert('An error occurred during conversion.');
     });
 });
+
+document.getElementById('about-link').addEventListener('click', function() {
+    var aboutSection = document.getElementById('about-section');
+    if (aboutSection.style.display === 'none' || aboutSection.style.display === '') {
+        aboutSection.style.display = 'block'; // Show the About section
+    } else {
+        aboutSection.style.display = 'none'; // Hide the About section
+    }
+});

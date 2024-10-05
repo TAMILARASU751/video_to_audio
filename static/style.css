@@ -33,6 +33,21 @@ body {
     font-size: 1.5rem; /* Adjust font size as needed */
     color: #8e051f; /* Match the theme color */
     font-weight: bold;
+
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #8e051f;
+    text-decoration:none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.nav-links a:hover{
+    text-decoration: underline;
 }
 
 /* Container for Forms */
@@ -96,4 +111,13 @@ hr {
 .about-section p {
     margin: 0; /* Reset default margin */
     line-height: 1.5; /* Improve readability */
+    text-align: justify;
 } 
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
