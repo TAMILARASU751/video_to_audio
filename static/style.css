@@ -142,8 +142,8 @@ hr {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    background-color:white;
+    color: #8e051f;
     width: 100%; /* Ensure full-width footer */
     margin-top: auto; /* Push the footer to the bottom */
 }
