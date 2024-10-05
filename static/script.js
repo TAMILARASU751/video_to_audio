@@ -1,3 +1,4 @@
+// Preview the selected video file
 document.getElementById('video-input').addEventListener('change', function() {
     const videoFile = this.files[0];
     const videoPreview = document.getElementById('video-preview');
@@ -31,10 +32,10 @@ document.getElementById('conversion-form').addEventListener('submit', function(e
 
         if (data.audio_url) {  // Ensure to check if audio_url exists in the response
             document.getElementById('audio-output').style.display = 'block';
-            document.getElementById('audio-source').src = data.audio_url; // Correct property name
+            document.getElementById('audio-source').src = data.audio_url; // Set audio source to the received URL
             document.getElementById('output-audio').load(); // Load the new audio source
         } else {
-            alert(data.error); // Alert any error message from the backend
+            alert(`Error: ${data.error}`); // Alert any error message from the backend
         }
     })
     .catch(error => {
@@ -43,6 +44,8 @@ document.getElementById('conversion-form').addEventListener('submit', function(e
         alert('An error occurred during conversion.');
     });
 });
+
+// About section functionality
 document.addEventListener('DOMContentLoaded', () => {
     const aboutLink = document.getElementById('about-link');
     const aboutSection = document.getElementById('about-section');

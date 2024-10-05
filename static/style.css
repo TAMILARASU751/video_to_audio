@@ -58,9 +58,14 @@ body {
     padding: 20px;
     background-color: white;
     color: black;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px; /* Increased border-radius for softer corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
     flex-grow: 1; /* Allow the container to grow and take up space */
+    transition: transform 0.3s; /* Smooth scaling effect on hover */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
 }
 
 /* Headings Styles */
@@ -71,10 +76,23 @@ h1, h3 {
 /* Form Styles */
 form {
     margin: 20px 0;
+    display: flex;               /* Use flexbox */
+    flex-direction: column;      /* Stack children vertically */
+    align-items: center;         /* Center children horizontally */
 }
 
 input[type="file"] {
     margin: 10px 0;
+    padding: 10px;               /* Added padding for better aesthetics */
+    border: 1px solid #8e051f;  /* Match border color */
+    border-radius: 5px;         /* Rounded corners */
+    background-color: #f9f9f9;  /* Light background for the input */
+    color: #333;                 /* Dark text color */
+    transition: border 0.3s;    /* Smooth border color transition */
+}
+
+input[type="file"]:hover {
+    border-color: #a94444;       /* Change border color on hover */
 }
 
 button {
@@ -85,10 +103,12 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px; /* Add space above the button */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background and scaling */
 }
 
 button:hover {
     background-color: #a94444;
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 hr {
@@ -115,10 +135,12 @@ hr {
     z-index: 1000;
     color:#8e051f;
 }
+
 .about-section h2, 
 .about-section h3 {
     text-align: center; /* Center align headings */
 }
+
 .about-section p,
 .about-section ul {
     text-align: left; /* Left align text */
