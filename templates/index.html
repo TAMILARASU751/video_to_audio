@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & ML Video/Audio Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/static/ct_logo.ico" alt="Logo">
+        </div>
+        <div class="nav-title">AI & ML Video To Audio Converter</div>
+        <div class="nav-links">
+            <!-- You can add other links here if needed -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>AI & ML Video/Audio Converter</h1>
+
+        <!-- Form for converting video to audio -->
+        <form id="conversion-form" action="/convert_video" method="POST" enctype="multipart/form-data">
+            <input type="file" name="video" accept="video/*" required id="video-input">
+            <video id="video-preview" controls style="display:none; width: 100%; margin-top: 20px;"></video>
+            <button type="submit" id="convert-button">Convert to Audio</button>
+            <div id="loading-animation" style="display: none;">
+                <div class="loader"></div>
+                <p>Converting your video to audio...</p>
+            </div>
+        </form>
+
+        <div id="audio-output" style="display: none;">
+            <h4>Output Audio:</h4>
+            <audio controls id="output-audio">
+                <source id="audio-source" src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <h2>About the Project</h2>
+        <p>This project provides an interface to convert video files to audio using AI & ML techniques.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
