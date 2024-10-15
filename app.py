@@ -34,14 +34,6 @@ SUPPORTED_FORMATS = {
     'flac': {
         'extension': 'flac',
         'ffmpeg_command': ['-vn', '-c:a', 'flac', '-compression_level', '5', '-f', 'flac']
-    },
-    'opus': {
-        'extension': 'opus',
-        'ffmpeg_command': ['-vn', '-c:a', 'libopus', '-b:a', '192k', '-f', 'opus']
-    },
-    'wma': {
-        'extension': 'wma',
-        'ffmpeg_command': ['-vn', '-c:a', 'wmav2', '-b:a', '192k', '-f', 'asf']
     }
 }
 
